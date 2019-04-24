@@ -8,7 +8,7 @@ from sklearn.cluster import KMeans
 
 def create_sin_data():
 
-    training_data = pd.read_csv("/Users/zahra_abasiyan/PycharmProjects/Project/deep_learning_course/datasets/HW02_RBF_Dataset1_daily-total-female-births-in-cal.csv")
+    training_data = pd.read_csv("/HW02_RBF_Dataset1_daily-total-female-births-in-cal.csv")
 
     data = training_data.as_matrix()
 
