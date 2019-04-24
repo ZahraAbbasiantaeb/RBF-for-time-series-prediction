@@ -65,7 +65,7 @@ with tf.Session() as sess:
 
     sess.run(init)
 
-    writer = tf.summary.FileWriter("/Users/zahra_abasiyan/PycharmProjects/Project/deep_learning_course/model_ebf_360_50/graph")
+    writer = tf.summary.FileWriter("/graph")
 
     writer.add_graph(graph=tf.get_default_graph())
 
@@ -84,11 +84,9 @@ with tf.Session() as sess:
 
         step += 1
 
-    save_path = saver.save(sess, "/Users/zahra_abasiyan/PycharmProjects/Project/deep_learning_course/model_ebf_360_50/model.ckpt")
+    save_path = saver.save(sess, "/model.ckpt")
 
     print("Model saved in path: %s" % save_path)
-
-    # saver.restore(sess, tf.train.latest_checkpoint("/Users/zahra_abasiyan/PycharmProjects/Project/deep_learning_course/rbf_500/model.ckpt"))
 
     plot_scatter_two(train_x,train_y, pred)
 
